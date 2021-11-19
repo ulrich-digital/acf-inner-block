@@ -13,7 +13,7 @@
      * @return  void
      */
 
-    console.log("initializeBlock: testimonial");
+    console.log("initializeBlock: restricted");
 
     var initializeBlock = function( $block ) {
         // $block.find('img').doSomething();
@@ -21,14 +21,14 @@
 
     // Initialize each block on page load (front end).
     $(document).ready(function(){
-        $('.testimonial').each(function(){
+        $('.restricted').each(function(){
             initializeBlock( $(this) );
         });
     });
 
     // Initialize dynamic block preview (editor).
     if( window.acf ) {
-        window.acf.addAction( 'render_block_preview/type=testimonial', initializeBlock );
+        window.acf.addAction( 'render_block_preview/type=restricted', initializeBlock );
     }
 
 })(jQuery);
