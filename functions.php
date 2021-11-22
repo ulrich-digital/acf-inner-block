@@ -11,7 +11,7 @@
 add_action('acf/init', 'my_acf_init_block_types');
 function my_acf_init_block_types() {
 
-        // Register a restricted block.
+	// Register a restricted block.
         acf_register_block_type(array(
             'name'              => 'restricted',
             'title'             => 'Restricted',
@@ -30,8 +30,6 @@ function my_acf_init_block_types() {
 	    // 'enqueue_script'    =>  get_template_directory_uri() .'/template-parts/blocks/beispiel.js', 
 	    // 'enqueue_style'     =>  get_template_directory_uri() . '/template-parts/blocks/beispiel.css',
         ));
-
-    }
 }
 
 function my_acf_block_render_callback( $block, $content = '', $is_preview = false, $post_id = 0 ) {
